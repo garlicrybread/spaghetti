@@ -15,8 +15,8 @@ handL = data["people"][0]["pose_keypoints"][21]
 DirR = elbowR - handR  
 DirL = elbowL - handL
 
-# Find which abosulte distance is greater --> this will be the actual direction
-# that the user is pointing
+# Find which abosulte distance is greater --> this will be the actual 
+# direction that the user is pointing
 if(abs(DirL) <= abs(DirR)):
 	# pointing right is given value of 0 
 	this_way = 0
