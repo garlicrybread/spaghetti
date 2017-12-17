@@ -1,8 +1,14 @@
+#!/usr/bin/python2
+
 import json
+import os
 from pprint import pprint
 
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
 #data = json.load(open("arm_right_keypoints.json"))
-data = json.load(open("arm_out_keypoints.json"))
+data = json.load(open(os.path.join(dir_path, "webcam_keypoints.json")))
 
 
 # Looking for 64.8064 and 26.6664, 195.602 and 230.244
@@ -25,10 +31,3 @@ else:
 	this_way = 1
 
 pprint(this_way)
-
-pprint(DirR)
-pprint(DirL)
-# pprint(elbowR)
-# pprint(handR)
-# pprint(elbowL)
-# pprint(handL)
